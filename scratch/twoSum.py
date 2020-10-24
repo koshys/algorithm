@@ -1,6 +1,8 @@
 import random
 
-n = [random.randrange(1, 100000) for i in range(10000)] # list Time O(n)
+n = [random.randrange(1, 1000000) for i in range(90000)] # list Time O(n)
+n[10000-1] = 4 
+n[10000-2] = 7
 t = 11
 
 def twoSum_O_n():
@@ -20,8 +22,8 @@ def twoSum_O_n():
         else:
             c[t-s] = s # writes O(1) in time and Space 2 -> 7 | 7 --> 2 
             # print ("reached else ", (t-s),c[(t-s)])
-    print("timeSum_O_n() for 10000 N takes ",timeit.default_timer() - start_time)
-
+    print(f"timeSum_O_n() for {len(n)} N takes ",timeit.default_timer() - start_time)
+    return
 
 def twoSum_O_nsquare():
     import timeit
@@ -30,10 +32,9 @@ def twoSum_O_nsquare():
         for j in n: # read Time O(n) Space O(n)  
             if i + j == t:
                 print ( i,j )
-
-    print("timeSum_O_nsquare() for 10000 N takes ",timeit.default_timer() - start_time)
-
-
+                print(f"timeSum_O_nsquare() for {len(n)} N takes ",timeit.default_timer() - start_time)
+                return
+                
 
 twoSum_O_n()
 twoSum_O_nsquare()
