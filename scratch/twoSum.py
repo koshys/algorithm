@@ -29,7 +29,7 @@ def twoSum_O_nsquare():
     import timeit
     start_time = timeit.default_timer()  
     for i in n:   # read Time O(n) Space O(n)  
-        for j in n: # read Time O(n) Space O(n)  
+        for j in n: # read Time O(n) Space O(n) for every i in the puter loop  
             if i + j == t:
                 print ( i,j )
                 print(f"timeSum_O_nsquare() for {len(n)} N takes ",timeit.default_timer() - start_time)
