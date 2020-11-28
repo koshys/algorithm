@@ -3,9 +3,9 @@ import stack
 stk = stack.Stack(sz=2)
 print(stk)
 
-print(stk.pushdown('Anju'))
-print(stk.pushdown('Sajan'))
-print(stk.pushdown('another person'))
+print(stk.pushdown('apple'))
+print(stk.pushdown('orange'))
+print(stk.pushdown('grapes'))
 
 print(stk.popup())
 print(stk.popup())
